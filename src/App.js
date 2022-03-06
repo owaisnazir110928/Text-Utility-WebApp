@@ -1,10 +1,10 @@
-
 import { useState } from 'react/cjs/react.development';
 import './App.css';
 import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
+import SignUp from './components/SignUp';
 import {
     BrowserRouter as Router,
     Switch,
@@ -44,8 +44,11 @@ const showAlert =(message,type)=>{
     <Alert  alert={alert}/>
     <div className="container">
    <Switch>
-          <Route exact path="/about">
+   <Route exact path="/about">
             <About mode={mode}/>
+          </Route>
+          <Route exact path="/SignUp">
+            <SignUp mode={mode}/>
           </Route>
           <Route react path="/">
           <TextForm showAlert={showAlert} heading="Enter The Text Below To Use" mode={mode}/>
