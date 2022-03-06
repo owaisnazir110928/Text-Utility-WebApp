@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import SignUp from './components/SignUp';
+import Images from './components/Images';
 import {
     BrowserRouter as Router,
     Switch,
@@ -47,10 +48,13 @@ const showAlert =(message,type)=>{
    <Route exact path="/about">
             <About mode={mode}/>
           </Route>
-          <Route exact path="/SignUp">
+    <Route exact path="/SignUp">
             <SignUp mode={mode}/>
+            </Route>
+    <Route exact path="/Images">
+            <Images mode={mode}/>
           </Route>
-          <Route react path="/">
+    <Route react path="/">
           <TextForm showAlert={showAlert} heading="Enter The Text Below To Use" mode={mode}/>
           </Route>    
 </Switch></div></Router>
